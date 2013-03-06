@@ -1,5 +1,5 @@
 /*
- * jquery.toc.js
+ * Table of Contents jQuery Plugin - jquery.toc.js
  *
  * Copyright 2013 Nikhil Dabas.
  * 

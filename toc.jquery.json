@@ -1,0 +1,33 @@
+{
+    "name": "toc",
+    "title": "Table of Contents jQuery Plugin",
+    "description": "A minimal, tiny jQuery plugin that will generate a table of contents, drawing from headings on the page.",
+    "keywords": [
+        "toc",
+        "contents",
+        "headings"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Nikhil Dabas",
+        "url": "http://www.nikhildabas.com/"
+    },
+    "maintainers": [
+        {
+            "name": "Nikhil Dabas",
+            "url": "http://www.nikhildabas.com/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "bugs": "https://github.com/ndabas/toc/issues",
+    "homepage": "https://github.com/ndabas/toc",
+    "docs": "https://github.com/ndabas/toc",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}
