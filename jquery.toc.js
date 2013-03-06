@@ -76,4 +76,12 @@
         $.fn.affix = old;
         return this;
     };
+
+    // Data API
+    $(window).on("load", function () {
+        $("[data-toc]").each(function () {
+            var elem = $(this), data = elem.data();
+            elem.toc(data.toc, {headings: data.tocHeadings, list: data.tocList});
+        });
+    });
 }(window.jQuery));
