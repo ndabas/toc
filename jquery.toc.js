@@ -1,12 +1,12 @@
 /*
  * Table of Contents jQuery Plugin - jquery.toc.js
  *
- * Copyright 2013 Nikhil Dabas.
+ * Copyright 2013 Nikhil Dabas
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License.  You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software distributed under the License
  * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
@@ -25,6 +25,7 @@
     // options:
     //    headings: string with a comma-separated list of selectors to be used as headings, in the
     //    order which defines their relative heirarchy level
+    //    list: the tag used to create the lists, either "ul" or "ol"
     $.fn.toc = function (contentContainer, options) {
 
         // Defaults
