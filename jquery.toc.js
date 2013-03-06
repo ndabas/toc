@@ -56,7 +56,9 @@
                 ));
             } else {
                 // Truncate the stack to the current level by chopping off the 'top' of the stack.
-                stack.splice(0, currentLevel - level);
+                // if there are more than two elements on the stack, preserve those - the first is
+                // the containing element, and the second is the 'root' list (ul/ol).
+                stack.splice(0, Math.min(currentLevel - level, Math.max(stack.length - 2, 0)));
             }
 
             // Add the list item
