@@ -25,17 +25,16 @@
     // headings: string with a comma-separated list of selectors to be used as headings, in the
     // order which defines their relative heirarchy level
     $.fn.toc = function (contentContainer, headings) {
-        return this.each(function () {
-            // Defaults
-            contentContainer = contentContainer || "body";
-            headings = headings || "h1,h2,h3,h4";
+        // Defaults
+        contentContainer = contentContainer || "body";
+        headings = headings || "h1,h2,h3,h4";
 
+        var headingSelectors = headings.split(",");
+
+        return this.each(function () {
             // The upside-down stack keeps track of lists where new siblings or children may be
             // added.
-            var stack = [$(this)],
-                listTag = this.tagName,
-                headingSelectors = headings.split(","),
-                currentLevel = 0;
+            var stack = [$(this)], listTag = this.tagName, currentLevel = 0;
 
             // Set up some automatic IDs if we do not already have them
             $(contentContainer).find(headings).attr("id", function (index, attr) {
