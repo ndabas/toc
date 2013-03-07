@@ -1,0 +1,7 @@
+{
+    "name": "toc",
+    "version": "0.3.1",
+    "dependencies": {
+        "bootstrap": "~2.3.1"
+    }
+}

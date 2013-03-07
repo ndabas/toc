@@ -1,0 +1,11 @@
+# Bower components
+components/
+
+# NPM components
+node_modules/
+
+# Build atrifacts
+docs/assets/
+docs/css/*.min.css
+docs/lib/jquery.toc/
+docs/_site/
