@@ -8,7 +8,7 @@ The generated TOCs are semantic, nested lists (`ul` or `ol`) with hash-link anch
 ## Usage
 
 Include jQuery (>= 1.6) and jquery.toc.js on your page. The plugin can then be used either via HTML5
-data attributes, or via the programmatic API.
+data attributes, or via the programmatic API. See below for the available options.
 
 ### Via data attributes
 
@@ -35,27 +35,27 @@ With options:
     <ul id="toc"></ul>
     ...
     <script type="text/javascript">
-        $("#toc").toc("div.container", "h2,h3,h4");
+        $("#toc").toc({content: "div.container", headings: "h2,h3,h4"});
     </script>
 
 ### Options
 
-    <ul data-toc="contentContainer" data-toc-headings="headings"></ul>
+    <ul data-toc="content" data-toc-headings="headings"></ul>
 
-    $(...).toc(contentContainer, headings);
+    $(...).toc({content: "body", headings: "h1,h2,h3"});
 
-The plugin has two parameters, both optional:
+The plugin has two options:
 
-* `contentContainer` is a selector where the plugin will look for headings to build up the TOC. The
-  default value is `"body"`.
+* `content` is a selector where the plugin will look for headings to build up the TOC. The default
+  value is `"body"`.
 * `headings` is a string with a comma-separated list of selectors to be used as headings, in the
-  order which defines their relative heirarchy level. The default value of `"h1,h2,h3,h4"` will
-  select all `h1`, `h2`, `h3`, and `h4` to build the TOC, with `h1` being a level 1, `h2` a level 2,
-  and so on. You can use any valid list of jQuery selectors; for example, if you just want `h1` tags
-  with a specific class, and no `h4` tags, you could use `"h1.title,h2,h3"` for this parameter.
+  order which defines their relative hierarchy level. The default value of `"h1,h2,h3"` will select
+  all `h1`, `h2`, and `h3` elements to build the TOC, with `h1` being a level 1, `h2` a level 2, and
+  so on. You can use any valid list of jQuery selectors; for example, if you just want `h1` tags
+  with a specific class, and no `h3` tags, you could use `"h1.title,h2"` for this parameter.
 
 In addition, the plugin will create nested lists of the same type (`ul` or `ol`) as the element that
-it's called on.
+it is called on.
 
 ### Automatic ID generation
 

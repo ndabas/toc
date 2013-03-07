@@ -17,27 +17,31 @@
 (function ($) {
     "use strict";
 
-    // Just in case you have another plugin that wants this
-    var old = $.fn.toc;
-
     // Builds a list with the table of contents in the current selector.
-    // contentContainer: where to look for headings
-    // headings: string with a comma-separated list of selectors to be used as headings, in the
-    // order which defines their relative heirarchy level
-    $.fn.toc = function (contentContainer, headings) {
-        // Defaults
-        contentContainer = contentContainer || "body";
-        headings = headings || "h1,h2,h3,h4";
-
-        var headingSelectors = headings.split(",");
-
+    // options:
+    //   content: where to look for headings
+    //   headings: string with a comma-separated list of selectors to be used as headings, ordered
+    //   by their relative hierarchy level
+    var toc = function (options) {
         return this.each(function () {
-            // The upside-down stack keeps track of lists where new siblings or children may be
-            // added.
-            var stack = [$(this)], listTag = this.tagName, currentLevel = 0;
+            var root = $(this),
+                data = root.data(),
+                thisOptions,
+                stack = [root], // The upside-down stack keeps track of list elements
+                listTag = this.tagName,
+                currentLevel = 0,
+                headingSelectors;
+
+            // Defaults: plugin parameters override data attributes, which override our defaults
+            thisOptions = $.extend(
+                {content: "body", headings: "h1,h2,h3"},
+                {content: data.toc || undefined, headings: data.tocHeadings || undefined},
+                options
+            );
+            headingSelectors = thisOptions.headings.split(",");
 
             // Set up some automatic IDs if we do not already have them
-            $(contentContainer).find(headings).attr("id", function (index, attr) {
+            $(thisOptions.content).find(thisOptions.headings).attr("id", function (index, attr) {
                 // Generate a valid ID: must start with a letter, and contain only letters and
                 // numbers. All other characters are replaced with underscores.
                 return attr ||
@@ -73,18 +77,17 @@
                 currentLevel = level;
             });
         });
-    };
+    }, old = $.fn.toc;
+
+    $.fn.toc = toc;
 
     $.fn.toc.noConflict = function () {
-        $.fn.affix = old;
+        $.fn.toc = old;
         return this;
     };
 
     // Data API
-    $(window).on("load", function () {
-        $("[data-toc]").each(function () {
-            var elem = $(this), data = elem.data();
-            elem.toc(data.toc, data.tocHeadings);
-        });
+    $(function () {
+        toc.call($("[data-toc]"));
     });
 }(window.jQuery));
