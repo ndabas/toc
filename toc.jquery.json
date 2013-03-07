@@ -25,8 +25,8 @@
         }
     ],
     "bugs": "https://github.com/ndabas/toc/issues",
-    "homepage": "https://github.com/ndabas/toc",
-    "docs": "https://github.com/ndabas/toc",
+    "homepage": "http://ndabas.github.com/toc/",
+    "docs": "http://ndabas.github.com/toc/",
     "dependencies": {
         "jquery": ">=1.6"
     }
