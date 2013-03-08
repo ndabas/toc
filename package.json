@@ -1,5 +1,5 @@
 {
-    "name": "toc",
+    "name": "jquery.toc",
     "version": "0.3.2",
     "description": "A minimal, tiny jQuery plugin that will generate a table of contents, drawing from headings on the page.",
     "main": "jquery.toc.js",

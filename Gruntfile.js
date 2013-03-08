@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 }
             },
             options: {
-                banner: "/*! Table of Contents jQuery Plugin * Copyright 2013 Nikhil Dabas * http://www.apache.org/licenses/LICENSE-2.0 */\n"
+                banner: "/*! Table of Contents jQuery Plugin - jquery.toc * Copyright 2013 Nikhil Dabas * http://www.apache.org/licenses/LICENSE-2.0 */\n"
             }
         },
         compress: {

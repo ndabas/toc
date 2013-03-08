@@ -1,4 +1,4 @@
-# Table of Contents jQuery Plugin - jquery.toc.js
+# Table of Contents jQuery Plugin - jquery.toc
 
 A minimal, tiny jQuery plugin that will generate a table of contents, drawing from headings on the
 page.
@@ -7,8 +7,9 @@ The generated TOCs are semantic, nested lists (`ul` or `ol`) with hash-link anch
 
 ## Usage
 
-Include jQuery (>= 1.6) and jquery.toc.js on your page. The plugin can then be used either via HTML5
-data attributes, or via the programmatic API. See below for the available options.
+Include jQuery (>= 1.6) and jquery.toc.js/jquery.toc.min.js on your page. The plugin can then be
+used either via HTML5 data attributes, or via the programmatic API. See below for the available
+options.
 
 ### Via data attributes
 
