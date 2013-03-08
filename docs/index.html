@@ -5,11 +5,15 @@ title: Table of Contents jQuery Plugin &mdash; jquery.toc
 <div class="jumbotron">
     <h1>Table of Contents jQuery Plugin</h1>
 
-    <p class="lead">A minimal, tiny jQuery plugin that will generate a table of contents, using semantic, nested lists with hash-link anchors to headings.</p>
+    <p class="lead">
+        A minimal, tiny jQuery plugin that will generate a table of contents, using
+        semantic, nested lists with hash-link anchors to headings.</p>
     
     <p><a class="btn btn-large btn-success" href="assets/jquery.toc.zip">Download</a></p>
     
-    <p><span class="muted">Version 0.3.3</span> &middot; <a href="http://github.com/ndabas/toc">GitHub Project</a></p>
+    <p>
+        <span class="muted">Version 0.3.3</span> &middot;
+        <a href="http://github.com/ndabas/toc">GitHub Project</a></p>
 </div>
 
 <hr>
@@ -23,8 +27,15 @@ title: Table of Contents jQuery Plugin &mdash; jquery.toc
 
     <h2>Usage</h2>
 
-    <p>Include jQuery (>= 1.6) and jquery.toc.js/jquery.toc.min.js on your page. The plugin can then be used either via HTML5
-    data attributes, or via the programmatic API. See below for the available options.</p>
+    <p>
+        You can <a href="assets/jquery.toc.zip">download the latest release</a>, or install with
+        Twitter's <a href="http://twitter.github.com/bower">Bower</a>:
+        <code>bower install jquery.toc</code>.</p>
+
+    <p>
+        Include jQuery (>= 1.6) and jquery.toc.js/jquery.toc.min.js on your page. The plugin can
+        then be used either via HTML5 data attributes, or via the programmatic API. See below for
+        the available options.</p>
 
     <h3>Via data attributes</h3>
 
@@ -63,43 +74,57 @@ title: Table of Contents jQuery Plugin &mdash; jquery.toc
     <p>The plugin has two options:</p>
 
     <ul>
-    <li><code>content</code> is a selector where the plugin will look for headings to build up the TOC. The default
-    value is <code>"body"</code>.</li>
-    <li><code>headings</code> is a string with a comma-separated list of selectors to be used as headings, in the
-    order which defines their relative hierarchy level. The default value of <code>"h1,h2,h3"</code> will select
-    all <code>h1</code>, <code>h2</code>, and <code>h3</code> elements to build the TOC, with <code>h1</code> being a level 1, <code>h2</code> a level 2, and
-    so on. You can use any valid list of jQuery selectors; for example, if you just want <code>h1</code> tags
-    with a specific class, and no <code>h3</code> tags, you could use <code>"h1.title,h2"</code> for this parameter.</li>
+        <li>
+            <code>content</code> is a selector where the plugin will look for headings to build up
+            the TOC. The default value is <code>"body"</code>.</li>
+        <li>
+            <code>headings</code> is a string with a comma-separated list of selectors to be used as
+            headings, in the order which defines their relative hierarchy level. The default value
+            of <code>"h1,h2,h3"</code> will select all <code>h1</code>, <code>h2</code>, and
+            <code>h3</code> elements to build the TOC, with <code>h1</code> being a level 1,
+            <code>h2</code> a level 2, and so on. You can use any valid list of jQuery selectors;
+            for example, if you just want <code>h1</code> tags with a specific class, and no
+            <code>h3</code> tags, you could use <code>"h1.title,h2"</code> for this parameter.</li>
     </ul>
 
-    <p>In addition, the plugin will create nested lists of the same type (<code>ul</code> or <code>ol</code>) as the element that
-    it is called on.</p>
+    <p>
+        In addition, the plugin will create nested lists of the same type (<code>ul</code> or
+        <code>ol</code>) as the element that it is called on.</p>
 
     <h3>Automatic ID generation</h3>
 
-    <p>The plugin generates hash-links to the headings on the page, to allow users to jump to the heading
-    by clicking in the generated table of contents. This feature requires that the headings have IDs
-    assigned; if they do not, the plugin will generate and assign IDs automatically.</p>
+    <p>
+        The plugin generates hash-links to the headings on the page, to allow users to jump to the
+        heading by clicking in the generated table of contents. This feature requires that the
+        headings have IDs assigned; if they do not, the plugin will generate and assign IDs
+        automatically.</p>
 
     <p>The generated IDs are based on the text inside the headings, and uses two simple rules:</p>
 
     <ul>
-    <li>The ID must begin with a letter; so any non-letter (<code>[^A-Za-z]</code>) characters are discarded from the
-    beginning of the string.</li>
-    <li>For the rest of the ID, only letters and numbers are used from the heading text; all other
-    characters (<code>[^A-Za-z0-9]</code>) are converted to underscores.</li>
+        <li>
+            The ID must begin with a letter; so any non-letter (<code>[^A-Za-z]</code>) characters
+            are discarded from the beginning of the string.</li>
+        <li>For the rest of the ID, only letters and numbers are used from the heading text; all
+            other characters (<code>[^A-Za-z0-9]</code>) are converted to underscores.</li>
     </ul>
 
-    <p>For example, a heading like <code>&lt;h2&gt;Heading 2.1&lt;/h2&gt;</code> will get the ID <code>Heading_2_1</code>.</p>
+    <p>
+        For example, a heading like <code>&lt;h2&gt;Heading 2.1&lt;/h2&gt;</code> will get the ID
+        <code>Heading_2_1</code>.</p>
 
     <h2>Alternatives</h2>
 
-    <p>If you're looking for a jQuery plugin that does more than just generate a minimal table of contents,
-    the project wiki <a href="https://github.com/ndabas/toc/wiki/Alternatives">lists some more plugins</a>.</p>
+    <p>
+        If you're looking for a jQuery plugin that does more than just generate a minimal table of
+        contents, the project wiki <a href="https://github.com/ndabas/toc/wiki/Alternatives">lists
+        some more plugins</a>.</p>
 
     <h2>License</h2>
 
-    <p>Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, version 2.0</a>.</p>
+    <p>
+        Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License,
+        version 2.0</a>.</p>
 
     <h2>Credits</h2>
 
