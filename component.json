@@ -1,7 +1,9 @@
 {
     "name": "toc",
     "version": "0.3.2",
+    "main": "./jquery.toc.js",
     "dependencies": {
-        "bootstrap": "~2.3.1"
+        "bootstrap": "~2.3.1",
+        "jquery": ">=1.6.3"
     }
 }
