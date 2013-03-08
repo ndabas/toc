@@ -1,6 +1,6 @@
 {
     "name": "jquery.toc",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "main": "./jquery.toc.js",
     "dependencies": {
         "jquery": ">=1.6.3"
