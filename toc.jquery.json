@@ -6,9 +6,9 @@
         "toc",
         "table",
         "contents",
-        "headings",
+        "headings"
     ],
-    "version": "0.3.3",
+    "version": "0.3.4",
     "author": {
         "name": "Nikhil Dabas",
         "url": "http://www.nikhildabas.com/"
