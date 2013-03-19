@@ -1,14 +1,14 @@
 {
     "name": "toc",
     "title": "Table of Contents jQuery Plugin",
-    "description": "A minimal, tiny jQuery plugin that will generate a table of contents, drawing from headings on the page.",
+    "description": "jquery.toc is a minimal, tiny jQuery plugin that will generate a table of contents, drawing from headings on the page.",
     "keywords": [
         "toc",
         "table",
         "contents",
         "headings"
     ],
-    "version": "0.3.4",
+    "version": "0.3.5",
     "author": {
         "name": "Nikhil Dabas",
         "url": "http://www.nikhildabas.com/"
