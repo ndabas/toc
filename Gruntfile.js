@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 }
             },
             options: {
-                banner: "/*! Table of Contents jQuery Plugin - jquery.toc * Copyright 2013 Nikhil Dabas * http://www.apache.org/licenses/LICENSE-2.0 */\n"
+                banner: "/*! Table of Contents jQuery Plugin - jquery.toc * Copyright (c) 2013-2016 Nikhil Dabas * http://www.apache.org/licenses/LICENSE-2.0 */\n"
             }
         },
         compress: {
@@ -43,16 +43,6 @@ module.exports = function(grunt) {
                     {expand: true, cwd: "docs/lib/jquery.toc/", src: ["*"], dest: "jquery.toc/"}
                 ]
             }
-        },
-        less: {
-            docs: {
-                options: {
-                    yuicompress: true
-                },
-                files: {
-                    "docs/css/docs.min.css": "docs/css/docs.less"
-                }
-            }
         }
     });
 
@@ -60,8 +50,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-compress");
-    grunt.loadNpmTasks('grunt-contrib-less');
-    
-    grunt.registerTask("default", ["copy", "jshint", "uglify", "compress", "less"]);
+
+    grunt.registerTask("default", ["copy", "jshint", "uglify", "compress"]);
 
 };

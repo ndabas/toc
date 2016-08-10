@@ -1,0 +1,92 @@
+/*!
+ * CSS for Table of Contents jQuery Plugin docs, based on the 'Narrow jumbotron' Bootstrap example
+ */
+
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.header,
+.content
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.content {
+    margin: 60px 0;
+}
+
+.content p + h4 {
+    margin-top: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .content,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+/* google-code-prettify */
+
+.com { color: #93a1a1; }
+.lit { color: #195f91; }
+.pun, .opn, .clo { color: #93a1a1; }
+.fun { color: #dc322f; }
+.str, .atv { color: #D14; }
+.kwd, .prettyprint .tag { color: #1e347b; }
+.typ, .atn, .dec, .var { color: teal; }
+.pln { color: #48484c; }
+
+.prettyprint {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}

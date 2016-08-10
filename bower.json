@@ -4,8 +4,5 @@
     "main": "./jquery.toc.js",
     "dependencies": {
         "jquery": ">=1.6.3"
-    },
-    "devDependencies": {
-    	"bootstrap": "~2.3.1"
     }
 }
