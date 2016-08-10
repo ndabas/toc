@@ -69,12 +69,11 @@ assigned; if they do not, the plugin will generate and assign IDs automatically.
 
 The generated IDs are based on the text inside the headings, and uses two simple rules:
 
-* The ID must begin with a letter; so any non-letter (`[^A-Za-z]`) characters are discarded from the
-  beginning of the string.
-* For the rest of the ID, only letters and numbers are used from the heading text; all other
-  characters (`[^A-Za-z0-9]`) are converted to underscores.
+* Space characters are converted to underscores. Multiple spaces are replaced with a single
+  underscore.
+* If the ID already exists, a suffix like "_1", "_2", etc. is tried till we get a unique ID.
 
-For example, a heading like `<h2>Heading 2.1</h2>` will get the ID `Heading_2_1`.
+For example, a heading like `<h2>Heading 2.1</h2>` will get the ID `Heading_2.1`.
 
 ## Alternatives
 

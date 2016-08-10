@@ -1,8 +1,8 @@
 /*
  * Table of Contents jQuery Plugin - jquery.toc
  *
- * Copyright 2013 Nikhil Dabas
- * 
+ * Copyright 2013-2016 Nikhil Dabas
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License.  You may obtain a copy of the License at
  *
@@ -42,10 +42,30 @@
 
             // Set up some automatic IDs if we do not already have them
             $(thisOptions.content).find(thisOptions.headings).attr("id", function (index, attr) {
-                // Generate a valid ID: must start with a letter, and contain only letters and
-                // numbers. All other characters are replaced with underscores.
-                return attr ||
-                    $(this).text().replace(/^[^A-Za-z]*/, "").replace(/[^A-Za-z0-9]+/g, "_");
+                // In HTML5, the id attribute must be at least one character long and must not
+                // contain any space characters.
+                //
+				// We just use the HTML5 spec now because all browsers work fine with it.
+                // https://mathiasbynens.be/notes/html5-id-class
+                var generateUniqueId = function (text) {
+                    // Generate a valid ID. Spaces are replaced with underscores. We also check if
+                    // the ID already exists in the document. If so, we append "_1", "_2", etc.
+                    // until we find an unused ID.
+
+                    if (text.length === 0) {
+                        text = "?";
+                    }
+
+                    var baseId = text.replace(/\s+/g, "_"), suffix = "", count = 1;
+
+                    while (document.getElementById(baseId + suffix) !== null) {
+                        suffix = "_" + count++;
+                    }
+
+                    return baseId + suffix;
+                };
+
+                return attr || generateUniqueId($(this).text());
             }).each(function () {
                 // What level is the current heading?
                 var elem = $(this), level = $.map(headingSelectors, function (selector, index) {

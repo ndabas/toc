@@ -12,7 +12,7 @@ title: Table of Contents jQuery Plugin &mdash; jquery.toc
     <p><a class="btn btn-lg btn-success" href="assets/jquery.toc.zip">Download</a></p>
 
     <p>
-        <span class="muted">Version 0.3.5</span> &middot;
+        <span class="muted">Version 0.4.0</span> &middot;
         <a href="http://github.com/ndabas/toc">GitHub Project</a></p>
 </div>
 
@@ -103,15 +103,15 @@ title: Table of Contents jQuery Plugin &mdash; jquery.toc
 
     <ul>
         <li>
-            The ID must begin with a letter; so any non-letter (<code>[^A-Za-z]</code>) characters
-            are discarded from the beginning of the string.</li>
-        <li>For the rest of the ID, only letters and numbers are used from the heading text; all
-            other characters (<code>[^A-Za-z0-9]</code>) are converted to underscores.</li>
+            Space characters are converted to underscores. Multiple spaces are replaced with a
+            single underscore.</li>
+        <li>If the ID already exists, a suffix like "_1", "_2", etc. is tried till we get a unique
+            ID.</li>
     </ul>
 
     <p>
         For example, a heading like <code>&lt;h2&gt;Heading 2.1&lt;/h2&gt;</code> will get the ID
-        <code>Heading_2_1</code>.</p>
+        <code>Heading_2.1</code>.</p>
 
     <h2>Alternatives</h2>
 
