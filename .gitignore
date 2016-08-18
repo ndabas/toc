@@ -5,6 +5,4 @@ bower_components/
 node_modules/
 
 # Build artifacts
-docs/assets/
-docs/lib/jquery.toc/
 docs/_site/
