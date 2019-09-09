@@ -8,7 +8,7 @@ The generated TOCs are semantic, nested lists (`ul` or `ol`) with hash-link anch
 ## Usage
 
 You can [download the latest release](http://ndabas.github.com/toc/assets/jquery.toc.zip), or
-install with [Bower](https://bower.io/): `bower install jquery.toc`.
+install with NPM: `npm install jquery.toc`.
 
 Include jQuery (>= 1.6) and jquery.toc.js/jquery.toc.min.js on your page. The plugin can then be
 used either via HTML5 data attributes, or via the programmatic API. See below for the available
